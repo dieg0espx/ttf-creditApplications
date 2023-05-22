@@ -1,5 +1,14 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
 .App {
-  text-align: center;
+  text-align: left;
+  padding: 45px 10px 0px 10px;
+  background-color: rgb(248, 248, 248);
 }
 
 .App-logo {
@@ -36,3 +45,278 @@
     transform: rotate(360deg);
   }
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* border: 1px solid red; */
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  height:60px;
+  padding: 0 20px;
+  z-index: 998;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: left;
+}
+.header img {
+  height: 50px;
+  margin: 5px;
+}
+
+.grid {
+  height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: auto 350px;
+}
+
+.applications {
+  overflow-y: scroll;
+}
+.wrapper-applications {
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  justify-content: left;
+  margin-top: 30px;
+}
+.row-application {
+  width: 300px;
+  margin: 10px 10px 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: wheat;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.row-application:hover {
+  transition: 0.4s;
+  transform: translateY(-5px);
+}
+  
+.nameOfBusiness {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.applications-data {
+  margin: -30px -20px 0px 0;
+  padding: 10px 20px;
+  background-color: white;
+  border-left: 1px solid lightgray;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.applications-data .data {
+  /* border: 1px solid red; */
+  height: 85vh !important;
+}
+
+.data-element {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.data-element h2 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.data-element p {
+  color: gray;
+}
+
+.applications-data h1 {
+  font-size: 21px;
+}
+.applications-data .label {
+  margin: 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.applications-data .btnHide {
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 3px 5px; 
+  margin-left: -10px;
+  margin-bottom: 20px;
+  color: gray;
+}
+.applications-data .btn-printApplication {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin-top: auto;
+  background-color: wheat;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 45px;
+}
+
+.references-divider {
+  margin: 10px 0 ; 
+  border: 1px solid rgb(237, 237, 237);
+}
+
+
+.wrapper-sheet {
+  height: 100vh;
+  margin: -45px -10px 0 -10px;
+  /* border: 1px solid red; */
+  background-color: white;
+}
+
+.sheet {
+  
+}
+
+.sheet-header {
+  display:grid;
+  grid-template-columns: 33% 33% 33%;
+  height: 110px;
+  /* border:  1px solid red; */
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding-bottom:10px ;
+}
+.sheet-header img {
+  height: 90px;
+}
+.sheet-header h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.sheet-header p {
+  text-align: right;
+  font-size: 15px;
+}
+
+#sheet-introduction {
+  width: 100%;
+  font-size: 10px;
+  margin: 10px 0;
+}
+
+.sheet h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.sheet h3 {
+  font-size: 12px;
+}
+.sheet p {
+  font-size: 12px;
+}
+#grid1 {
+  display: grid;
+  grid-template-columns: 150px auto;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+#type-of-business-grid {
+  padding: 3px 5px;
+}
+#grid1 .block-right {
+  border-left: 1px solid black;
+  
+}
+#grid1 #legalNameOfBusiness {
+  padding: 2px 10px;
+  border-bottom: 1px solid black;
+}
+#grid1 #businessRegistrationNumber {
+  padding: 3px 10px;
+}
+
+#grid2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+#businessAddress {
+  padding: 5px;
+  border-right: 1px solid black;
+}
+#grid2 .block {
+  padding: 3px;
+  border-bottom: 1px solid black;
+}
+#grid2 .block h3, #grid2 .block p {
+    display: inline;  
+}
+.noBottomBorder {
+  border-bottom: none !important;
+}
+
+
+#grid3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+#bankAddress {
+  padding: 5px;
+
+}
+#grid3 .block {
+  padding: 3px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#grid4 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 1px solid black;
+}
+#grid4 h3, #grid4 p {
+  display: inline;  
+}
+.notInline {
+  display: block !important;
+}
+#owner1 {
+  border-right: 1px solid black;
+}
+#owner1, #owner2 {
+  padding: 3px;
+}
+
+.reference {
+  display: grid;
+  grid-template-columns: auto 8% 24% 8% 24% 8% 24%;
+  margin-bottom: 5px;
+}
+
+.reference .bold {
+  font-weight: bold;
+}
+
+#grid5 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  margin-top: 40px;
+}
+#grid5 img {
+  width: 170px;
+  height:50px;
+  padding: 3px 10px;
+  border-bottom: 1px solid black;
+}
+
+iframe { display: none;}
