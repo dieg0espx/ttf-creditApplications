@@ -88,13 +88,28 @@
   justify-content: left;
   margin-top: 30px;
 }
-.row-application {
-  width: 300px;
-  margin: 10px 10px 10px 0;
-  padding: 20px;
-  border-radius: 10px;
+
+.table-applications {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-applications td, .table-applications th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.table-applications th {
   background-color: wheat;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.table-applications tr:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.row-application {
+  width: 100%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
 .row-application:hover {
   transition: 0.4s;

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, useActionData } from "react-rou
 
 import CreditApplications from "./pages/CreditApplications";
 import Sheet from "./pages/Sheet";
+import CreditRequest from './pages/CreditRequest';
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
         <div className="App">
           <div className="content">
             <Routes>
-              <Route path="/" element={<CreditApplications />} />
+              <Route path="/creditApplication" element={<CreditApplications />} />
+            </Routes>
+            <Routes>
+              <Route path="/creditRequest" element={<CreditRequest />} />
             </Routes>
             <Routes>
               <Route path="/sheet" element={<Sheet />} />

@@ -44,17 +44,22 @@ function CreditApplications() {
        <div className='applications'>
          <h1> Applications For Credit </h1>
          <div className='wrapper-applications'> 
+         <table className='table-applications'>
+         <tr>
+            <th>Company Name</th>
+            <th>Type of Business</th>
+            <th>Owner 1</th>
+            <th>Owner 2</th>
+          </tr>
            {creditApplications.map((application, i) =>(
-             <div key={i} className='row-application' onClick={()=> setDataIndex(i + 1)}>
-               <p className='nameOfBusiness'> <i className="bi bi-briefcase"></i> {application.legalNameOfBusiness}</p>
-               <p className='nameOfBusiness'> <i className="bi bi-briefcase"></i> {application.typeOfBusiness}</p>
-               <div className='two-col'>
-                 <p> <i className="bi bi-person"></i> {application.owner1Name} </p>
-                 {application.owner2Name !== "" ? <p> <i className="bi bi-person"></i> {application.owner2Name}</p> : null}                  
-               </div>
-             </div>
+            <tr key={i} onClick={()=> setDataIndex(i + 1)}>
+              <td> {application.legalNameOfBusiness}  </td>
+              <td> {application.typeOfBusiness}  </td>
+              <td> {application.owner1Name}  </td>
+              <td> {application.owner2Name}  </td>
+            </tr>
            ))}
-          
+          </table>
          </div>
        </div>
        <div className='applications-data' style={{display: dataIndex ? "block":"none"}}>
