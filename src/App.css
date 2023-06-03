@@ -207,7 +207,7 @@
   height: 90px;
 }
 .sheet-header h1 {
-  font-size: 20px;
+  font-size:15px;
   text-align: center;
 }
 .sheet-header p {
@@ -335,3 +335,65 @@
 }
 
 iframe { display: none;}
+
+
+
+
+
+/*  =========== SHEET - CREDIT REQUESTS =========== */
+
+.field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin-top: 5px;
+  width: 100%;
+}
+.field h2 {
+  width: fit-content;
+  display: block;
+  margin: 0; padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.field p {
+  display: block;
+  margin: 0; padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 2px solid lightgray;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  width: 100%;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: calc(50% - 5px) calc(50% - 5px) ;
+  gap: 10px;
+}
+
+#sheet2-subtitle {
+  font-size:18px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+#additionalComments {
+  border: 2px solid lightgray;
+  min-height: 80px;
+  font-size: 16px;
+  padding: 8px;
+}
+
+#signatory-area {
+  margin-top: 60px;
+}
+#sheet2-sign {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -35px;
+  width: 265px;
+  height: 50px;
+  padding: 0 70px;
+  border-bottom:  2px solid lightgray;
+}
