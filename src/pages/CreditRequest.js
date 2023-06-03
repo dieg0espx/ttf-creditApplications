@@ -143,7 +143,7 @@ function CreditRequest() {
              
              
            </div>
-           <button className='btn-printApplication' onClick={()=>printSheet('/sheet/?id=' + dataIndex)}> <i className="bi bi-printer-fill"></i> Print Application </button>
+           <button className='btn-printApplication' onClick={()=>printSheet('/sheetCreditRequest/?id=' + dataIndex)}> <i className="bi bi-printer-fill"></i> Print Application </button>
            </div>
            )
          ))}
