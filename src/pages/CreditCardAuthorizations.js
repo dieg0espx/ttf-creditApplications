@@ -3,7 +3,7 @@ import { getFirestore, collection, query, getDocs } from 'firebase/firestore';
 import { app } from '../Firebase';
 
 
-function CreditApplications() {
+function CreditCardAuthorizations() {
 
   const db = getFirestore(app);
 
@@ -43,9 +43,9 @@ function CreditApplications() {
      <div className='grid' style={{display: dataIndex ? "grid":"block"}}>
        <div className='applications'>
           <div className='navigation-bar'>
-            <button className='selected'> Credit Applications </button>
+            <button onClick={()=> window.location ='/creditApplication'}> Credit Applications </button>
             <button onClick={()=> window.location ='/creditRequest'}> Credit Requests </button>
-            <button onClick={()=> window.location ='/creditCardAuthorization'}> Credit Card Authorizations </button>
+            <button className='selected'> Credit Card Authorizations </button>
           </div>
          <div className='wrapper-applications'> 
          <table className='table-applications'>
@@ -216,4 +216,4 @@ function CreditApplications() {
   )
 }
 
-export default CreditApplications
+export default CreditCardAuthorizations

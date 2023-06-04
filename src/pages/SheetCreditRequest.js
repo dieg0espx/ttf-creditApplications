@@ -29,15 +29,15 @@ function SheetCreditRequest() {
 
     // FUNCTION TO PRINT THE PAGE ONCE EVERYTHING IS FULLY LOADED
 
-    // useEffect(() => {
-    //     const handlePrint = () => {
-    //       window.print();
-    //     };
+    useEffect(() => {
+        const handlePrint = () => {
+          window.print();
+        };
     
-    //     if (creditRequests.length > 0) {
-    //       handlePrint();
-    //     }
-    // }, [creditRequests]);
+        if (creditRequests.length > 0) {
+          handlePrint();
+        }
+    }, [creditRequests]);
 
   return (
     <div className='wrapper-sheet'>

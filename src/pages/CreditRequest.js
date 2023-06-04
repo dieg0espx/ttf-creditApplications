@@ -16,9 +16,12 @@ function CreditRequest() {
 
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
+      const q = query(collection(db, "form2"));
       const applications = querySnapshot.docs.map((doc) => doc.data());
-      console.log(doc.data());
-      setCreditRequests(applications);
+      const sortedApplications = applications.sort((a, b) => a.date - b.date);
+
+      console.log(sortedApplications);
+      setCreditRequests(sortedApplications);
     });
   }
 
@@ -42,7 +45,11 @@ function CreditRequest() {
      </div>
      <div className='grid' style={{display: dataIndex ? "grid":"block"}}>
        <div className='applications'>
-         <h1> Credit Request </h1>
+          <div className='navigation-bar'>
+            <button onClick={()=> window.location ='/creditApplication'}> Credit Applications </button>
+            <button className='selected'> Credit Requests </button>
+            <button onClick={()=> window.location ='/creditCardAuthorization'}> Credit Card Authorizations </button>
+          </div>
          <div className='wrapper-applications'> 
          <table className='table-applications'>
          <tr>
@@ -128,10 +135,10 @@ function CreditRequest() {
                <h2> <i className="bi bi-caret-right-fill"></i> Customer Qualification: </h2>
                <p> {application.customerQualification}</p>
              </div>
-             <div className='data-element'>
+             {/* <div className='data-element'>
                <h2> <i className="bi bi-caret-right-fill"></i> Additional Comments: </h2>
                <p> {application.additionalComments}</p>
-             </div>
+             </div> */}
              <div className='data-element'>
                <h2> <i className="bi bi-caret-right-fill"></i> Print Name: </h2>
                <p> {application.printName}</p>

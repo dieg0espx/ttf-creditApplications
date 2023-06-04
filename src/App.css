@@ -89,6 +89,32 @@
   margin-top: 30px;
 }
 
+.navigation-bar  {
+  width: 100%;
+}
+
+.navigation-bar button {
+  padding: 10px 35px;
+  color: gray;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  margin-right: 10px;
+  outline: none;
+  font-weight: bold;
+
+}
+.navigation-bar button:hover{
+  color: white;
+  background-color: #5b83e8;
+}
+.navigation-bar .selected {
+  color: white;
+  background-color: #5b83e8;
+}
+
+
 .table-applications {
   width: 100%;
   border-collapse: collapse;
@@ -99,7 +125,8 @@
   padding: 8px;
 }
 .table-applications th {
-  background-color: wheat;
+  color: white;
+  background-color: #5b83e8;
 }
 .table-applications tr:hover {
   background-color: rgb(233, 233, 233);
@@ -171,7 +198,8 @@
   border: none;
   border-radius: 5px;
   margin-top: auto;
-  background-color: wheat;
+  color: white;
+  background-color: #5b83e8;
   font-weight: bold;
   font-size: 15px;
   line-height: 45px;

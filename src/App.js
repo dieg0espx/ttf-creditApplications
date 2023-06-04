@@ -6,6 +6,7 @@ import CreditApplications from "./pages/CreditApplications";
 import Sheet from "./pages/Sheet";
 import CreditRequest from './pages/CreditRequest';
 import SheetCreditRequest from './pages/SheetCreditRequest';
+import CreditCardAuthorizations from './pages/CreditCardAuthorizations';
 
 
 function App() {
@@ -21,11 +22,15 @@ function App() {
               <Route path="/creditRequest" element={<CreditRequest />} />
             </Routes>
             <Routes>
+              <Route path="/creditCardAuthorization" element={<CreditCardAuthorizations/>} />
+            </Routes>
+            <Routes>
               <Route path="/sheet" element={<Sheet />} />
             </Routes>
             <Routes>
               <Route path="/sheetCreditRequest" element={<SheetCreditRequest/>} />
             </Routes>
+            
           </div>
         </div>
       </Router>
